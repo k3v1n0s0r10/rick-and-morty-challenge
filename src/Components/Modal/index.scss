@@ -1,0 +1,96 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  .modal-container {
+    overflow: hidden;
+    background-color: rgb(46, 46, 46);
+    width: 90vw;
+    height: 95vh;
+    min-width: 350px;
+    min-height: 300px;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 30% 20% 50%;
+    align-items: center;
+    justify-items: center;
+
+    img {
+      margin: 1rem;
+      border-radius: 2rem;
+      height: 200px;
+      width: 200px;
+    }
+
+    .character-info {
+      font-family: "Creepster";
+      line-height: 1;
+      font-size: 2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      * {
+        margin: 0;
+      }
+
+      h3 {
+        &.alive {
+          color: rgb(10, 200, 10);
+        }
+
+        &.dead {
+          color: red;
+        }
+      }
+
+      button {
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: rgb(0, 170, 255);
+        width: fit-content;
+        align-self: center;
+        cursor: pointer;
+      }
+    }
+
+    .episode-list {
+      overflow: hidden scroll;
+      height: 90%;
+      width: 90%;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .modal {
+    .modal-container {
+      grid-template-columns: 20% 80%;
+      grid-template-rows: 50% 50%;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+
+      .character-info {
+        grid-row: 2/2;
+      }
+
+      .episode-list {
+        grid-row: 1/3;
+      }
+    }
+  }
+}

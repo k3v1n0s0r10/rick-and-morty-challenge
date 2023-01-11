@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Creepster";
+  src: url(Assets/Fonts/Creepster-Regular.ttf) format("truetype");
+}
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

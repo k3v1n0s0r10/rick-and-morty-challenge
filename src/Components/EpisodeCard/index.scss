@@ -1,0 +1,39 @@
+.episode-card {
+  border-radius: 1rem;
+  border: none;
+  margin: 1rem 0;
+  width: 100%;
+
+  &:focus .episode-characters {
+    max-height: 5000px;
+  }
+
+  p {
+    font-size: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .episode-characters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-in-out;
+
+    .character-card {
+      height: 100px;
+      width: 100px;
+      margin: 3px;
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+  }
+}
